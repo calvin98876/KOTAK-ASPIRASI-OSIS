@@ -29,7 +29,10 @@ export default function AspirasiForm() {
     });
     setLoading(false);
 
-    if (error) return setResult("Gagal mengirim aspirasi. Periksa koneksi database.");
+    if (error) {
+  console.error("SUPABASE ERROR:", error);
+  return setResult(`Gagal: ${error.message}`);
+}
     setMessage(""); setName(""); setClassName("");
     setResult("Aspirasi berhasil dikirim. Terima kasih sudah menyampaikan suara kamu.");
   }
