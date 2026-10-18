@@ -132,7 +132,6 @@ return ( <main>
     </div>
   </section>
 </main>
-```
 
 );
 }
